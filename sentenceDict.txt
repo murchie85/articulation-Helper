@@ -1,0 +1,1 @@
+[{'type': 'generic', 'text': 'There was trouble on the horizon', 'tags': 'danger'}, {'type': 'grim', 'text': 'She was deader than yesterday', 'tags': 'death'}]
