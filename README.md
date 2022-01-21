@@ -10,3 +10,11 @@ It's a work in progress, but so far you can.
 	2.2 Label its type 
 3. Exit
 
+
+
+
+## To Do 
+
+Add words in the same manner 
+
+- goods, the brass, 

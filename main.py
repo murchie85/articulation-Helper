@@ -1,5 +1,6 @@
 from tools import *
-quoteList = 'SentenceDict.txt'
+quoteList = 'storage/SentenceDict.txt'
+wordList  = 'storage/wordDict.txt'
 print('\033c')
 
 
@@ -11,9 +12,11 @@ welcome="""
  --------------------------------------------------------
 
 
- [1] View Random Sentence
- [2] Add to Expression Dict
- [3] View useful words
+ [1] View List of Quotes
+ [2] View useful words
+ [3] Add to Expression Dict
+ [4] Add to word bank
+ [5] View a Random Quote
  [x] Exit
 
 """
@@ -30,14 +33,33 @@ while(choice.upper()!='X'):
     
     if(choice=='1'):
         print('\033c')
-        print('Getting random quote: ')
-        randomQuote(quoteList)
+        getQuoteList(quoteList)
+        input('\n\n Press any key to continue...')
+        print('\033c')
+        print(welcome)
+    
+    if(choice=='2'):
+        print('\033c')
+        getWordList(wordList)
         input('\n\n Press any key to continue...')
         print('\033c')
         print(welcome)
 
-    if(choice=='2'):
+    if(choice=='3'):
         saveQuote(quoteList)
+        input('\n\n Press any key to continue...')
+        print('\033c')
+        print(welcome)
+
+    if(choice=='4'):
+        saveWord(wordList)
+        input('\n\n Press any key to continue...')
+        print('\033c')
+        print(welcome)
+
+    if(choice=='5'):
+        print('\033c')
+        randomQuote(quoteList)
         input('\n\n Press any key to continue...')
         print('\033c')
         print(welcome)
