@@ -17,6 +17,7 @@ welcome="""
  [3] Add to Expression Dict
  [4] Add to word bank
  [5] View a Random Quote
+ [6] View specific Quotes
  [x] Exit
 
 """
@@ -60,6 +61,12 @@ while(choice.upper()!='X'):
     if(choice=='5'):
         print('\033c')
         randomQuote(quoteList)
+        input('\n\n Press any key to continue...')
+        print('\033c')
+        print(welcome)
+    if(choice=='6'):
+        print('\033c')
+        getQuoteListFromTags(quoteList)
         input('\n\n Press any key to continue...')
         print('\033c')
         print(welcome)

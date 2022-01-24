@@ -101,3 +101,49 @@ def saveWord(wordList):
 
     print('Data saved')
 
+
+
+
+
+def getQuoteListFromTags(quoteList):
+    data = openFile(quoteList)
+    spaceMax = 20
+
+    # --------get all tags into list
+
+    tl = []
+    for d in data:
+        for t in d['tags'].split(','):
+            tl.append(t)
+
+    # --------dedup list
+    
+    tagList = list(dict.fromkeys(tl))
+
+    # -------- print out tag selection
+
+    for x in range(0,len(tagList)):
+        print('[' + str(x) + '] ' + str(tagList[x]))
+
+    # -------- prompt user to chose 
+
+    chosenIndex = str(input('\n\n Chose a tag.\n'))
+    try:
+        chosenTag = tagList[int(chosenIndex)]
+    except:
+        print('Bad selection..')
+        return()
+
+    # --------print selected quotes matching tag 
+
+    for item in data:
+
+        if(chosenTag in item['tags']):
+            # add dynamic space
+            tags = str(item['tags'])
+            diff = spaceMax-len(tags)
+            for x in range(diff):
+                tags += ' '
+
+            print(tags + ': ' + str(item['text']))
+    print('\n\n')
