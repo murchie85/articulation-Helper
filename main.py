@@ -12,12 +12,12 @@ welcome="""
  --------------------------------------------------------
 
 
- [1] View List of Quotes
- [2] View useful words
+ [1] VIEW List of QUOTES
+ [2] VIEW useful WORDS
  [3] Add to Expression Dict
  [4] Add to word bank
- [5] View a Random Quote
- [6] View specific Quotes
+ [5] VIEW a Random QUOTES
+ [6] VIEW specific QUOTES
  [x] Exit
 
 """
